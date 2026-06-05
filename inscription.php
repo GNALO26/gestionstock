@@ -25,8 +25,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
     $db = getDB();
 
-    // 3. Vérifier si le login existe déjà
-    $stmt = $db->prepare("SELECT id FROM user WHERE login = ?");
+    // 3. Vérifier si le login existe déjà (table "user" avec guillemets)
+    $stmt = $db->prepare('SELECT id FROM "user" WHERE login = ?');
     $stmt->execute([$login]);
 
     if ($stmt->fetch()) {
@@ -37,8 +37,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
       // 5. Insérer l'utilisateur
       $stmt = $db->prepare(
-        "INSERT INTO user (nom, prenom, contact, login, password)
-         VALUES (?, ?, ?, ?, ?)"
+        'INSERT INTO "user" (nom, prenom, contact, login, password)
+         VALUES (?, ?, ?, ?, ?)'
       );
       $stmt->execute([$nom, $prenom, $contact, $login, $hash]);
 

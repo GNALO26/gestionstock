@@ -8,9 +8,7 @@ require_once("config.php");
 $page_title = "Utilisateurs";
 $db = getDB();
 
-$users = $db->query(
-  "SELECT id, nom, prenom, contact, login FROM user ORDER BY nom, prenom"
-)->fetchAll();
+$users = $db->query('SELECT id, nom, prenom, contact, login FROM "user" ORDER BY nom, prenom')->fetchAll();
 
 include("header.php");
 ?>
@@ -43,8 +41,8 @@ include("header.php");
                 <?php else: ?>
                   <span class="badge badge-gold">Actif</span>
                 <?php endif; ?>
-              </td>
-            </tr>
+               </td>
+             </tr>
           <?php endforeach; ?>
         <?php endif; ?>
       </tbody>

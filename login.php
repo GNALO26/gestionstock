@@ -27,10 +27,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $erreur = "Veuillez remplir tous les champs.";
 
     } else {
-      $db   = getDB();
+      $db = getDB();
 
-      // Chercher l'utilisateur par son login
-      $stmt = $db->prepare("SELECT * FROM user WHERE login = ?");
+      // Chercher l'utilisateur par son login (table "user" avec guillemets)
+      $stmt = $db->prepare('SELECT * FROM "user" WHERE login = ?');
       $stmt->execute([$login]);
       $user = $stmt->fetch();
 
