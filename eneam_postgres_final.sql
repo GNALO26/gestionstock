@@ -85,7 +85,7 @@ CREATE TABLE "user" (
 );
 
 INSERT INTO "user" (id, nom, prenom, contact, login, password) VALUES
-(1,'CHABI','Affolabi Esdras Daldio','0197331555','GNALO26','$2y$10$szNzS/2DdUF1YYpBEjwvbuEc2omq7h8TNOLE7sKVeOqlEToIej8e.'),
+(1,'Karlos','Freda','0197331555','GNALO26','$2y$10$szNzS/2DdUF1YYpBEjwvbuEc2omq7h8TNOLE7sKVeOqlEToIej8e.'),
 (2,'AMOUSSOU','Lewis','0154766900','prof','$2y$10$HQ7DXHgGb.hmAVfn/o/uMuDLgwVZHY3WAiTKjTLYTSgunfipuRTUq'),
 (3,'ALOGNISSOU','Astrid','0198464263','Etu1','$2y$10$HRXnlH2z1RkaKp9LTErqYuXtohbdrjKUK0ikhfm3PbDKAtVTVpL8a'),
 (4,'Glazaï','Jolie','26789087','Etu','$2y$10$6lmV7S.CVpZfEMHFf2byeeCYfIGWUSJ4eA6fT4tF6jclTDdMyMuxO'),
